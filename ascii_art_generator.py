@@ -14,12 +14,12 @@ def pixel_to_ascii(img):
 
 def main():
 	path = sys.argv[1]
-	print('image path: ', path)
+	# print('image path: ', path)
 	img = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
 
 	ratio = 100/img.shape[1]
 	img = cv2.resize(img, None, fx = ratio, fy = ratio)
-	print(img.shape)
+	# print(img.shape)
 
 	ascii_art = pixel_to_ascii(img)
 	for s in ascii_art:
